@@ -17331,6 +17331,8 @@ float * llama_get_embeddings_ith(struct llama_context * ctx, int32_t i) {
 
     llama_synchronize(ctx);
 
+    std::cout << "Hello from llama_get_embeddings_ith" << std::endl;
+
     try {
         if (ctx->embd == nullptr) {
             throw std::runtime_error("no embeddings");
